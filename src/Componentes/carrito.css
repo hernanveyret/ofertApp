@@ -1,0 +1,136 @@
+.contenedorCarrito {
+    width: 100%;
+    min-height: 82vh;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.cadaProducto {
+    width: 95%;
+    height: 60px;
+    border: thin solid grey;
+    border-radius: 0.75rem;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+.imgProducto {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.accion {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.imgProducto img {
+    width: 75%;
+    height: 100%;
+    border-radius: 0.75rem;
+}
+.descriptcionProducto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.descriptcionProducto {
+    width:80%;
+}
+.navTotal {
+    border: thin solid grey;
+    border-radius: 0.75rem 0.75rem 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: orangered;
+}
+.navTotal div {
+   width: 33%;
+   
+}
+.botonera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.importe {
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    
+}
+.cantProductos {
+    color: white;
+    font-weight: 600;
+}
+.botonera button {
+    padding: 10px;
+    background-color: #282c34;
+    color: white;
+    cursor:pointer;
+    margin: 10px 0;
+    z-index: 10px;
+}
+.botonera button:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 4px grey;;
+}
+.btnBorrar {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: transparent;
+    margin-right: 10px;
+    background-image: url("../img/basura.webp");
+    background-size: cover;
+}
+.btnBorrar:hover {
+    background-image: url("../img/basura2.webp");
+    background-size: cover;
+}
+
+.btnBorrar:hover {
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 4px grey);
+}
+.inputName {
+    margin-left: 10px;
+    padding: 10px;
+    border: thin solid grey;
+    border-radius: 0.25rem;
+    width: 80px;
+}
+@media screen and (min-width: 1024px) {
+    .imgProducto img {
+     width: 30%;
+    }
+    .imgProducto {
+        align-items: flex-start;
+    }
+    .cadaProducto {
+        width: 70%;
+    }
+    .inputName {
+        width: 150px;
+    }
+  }

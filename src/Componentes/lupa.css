@@ -1,0 +1,52 @@
+.contenedorLupa {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.contenedor {
+    width: 50%;
+    height: 70%;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.349);
+    border-radius: 0.75rem;
+    position: relative;
+    
+}
+.contenedorImg {
+    width: auto;
+    height: 100%;
+}
+.contenedor img {
+    width: auto;
+    height: 100%;
+    border-radius: 20px;
+    border: 10px solid orangered;
+}
+.btnCerrar {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+}
+.btnCerrar:hover {
+    cursor: pointer;
+    text-shadow: 3px 3px 5px  black;
+}
+
+@media screen and (max-width: 460px) {    
+    .contenedor {
+        width: 95%;
+    }
+    .contenedor img {
+        width: 100%;
+    }
+}

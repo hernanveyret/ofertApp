@@ -1,0 +1,68 @@
+.card {
+    border: thin solid grey;
+    width: 47%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.75rem;
+    box-shadow: 3px 3px 4px grey;
+}
+.tarjeta {
+    border: thin solid grey;
+    width: 47%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.75rem;
+    box-shadow: 3px 3px 4px grey;
+}
+.tarjeta:hover {
+    border: 2px solid orangered;
+}
+.titulo {
+    margin: 3px;
+}
+.tarjeta img {
+    width: 90%;
+}
+.navCard {
+    width: 100%;
+   /* background-color: rgb(75, 72, 72);*/
+    background-color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 0 0 0.75rem 0.75rem;
+}
+.Descripcion {
+    width: 90%;
+    min-height: 80px;
+    margin: 5px 0;
+    text-align: center;
+}
+p {
+    margin-top: 5px;
+}
+.btnCard {
+    border: none;
+    width: 30px;
+    background: transparent;
+    z-index: 9;
+}
+.btnCard img {
+    width: 60%;
+    filter: drop-shadow(3px 3px 6px black);
+}
+.btnCard:hover {
+    cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+    .tarjeta {
+        width: 20%;
+    }
+  }
