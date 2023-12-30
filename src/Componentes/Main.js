@@ -35,10 +35,10 @@ const Main = () => {
   const [info, setInfo] = useState(false);
   const [loading, setLoading] = useState(false)
 
-  //const url = "http://localhost:5000/ofertas"
+  const url = "http://localhost:5000/ofertas"
   
   
-  const url = "https://raw.githubusercontent.com/hernanveyret/ofertApp/main/src/Api/data.json"
+  //const url = "https://raw.githubusercontent.com/hernanveyret/ofertApp/main/src/Api/data.json"
 
  useEffect(() => {
    const dataFetch = async () => {    
@@ -116,22 +116,22 @@ favoritos.forEach(e => {
  const cerrarVendido = () => {
   setProductoVendido(false); }
 
+  //Ingresa el producto seleccionado al carrito
  const ingresarProductos = (e) => {
-  let id = parseFloat(e.target.dataset.id)
-  const productoCarrito = db.filter(e => e.id === id)
-  setProductos([...productos,productoCarrito[0]])
-  setCheckproducto(true)
+  const id = parseFloat(e.target.dataset.id);  
+  const productoCarrito = db.filter(e => e.id === id);
+    setProductos([...productos,productoCarrito[0]]);
+    setCheckproducto(true);  
  }
-
+  //Borra el producto del carrito de compras
  const borraProducto = (e) => {
   let id = parseFloat(e.target.dataset.id);
   const isDelete = productos.filter(e => e.id !== id)
   setProductos(isDelete)
  }
 
-  // suma el precio de los productos
-  
- useEffect(() => {
+  // suma el precio de los productos  
+ useEffect(() => { 
   const $total = productos.reduce((e,i) => e + i.precio,0)
   setTotal($total)
  },[productos])

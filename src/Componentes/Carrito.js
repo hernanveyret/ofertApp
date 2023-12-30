@@ -24,11 +24,11 @@ const Carrito = ({productos,setProductos,cantPares,total,borraProducto, setCarri
     setCarrito(false)
     setHome(true)
   }
-
+  
   return (
     <div className="contenedorCarrito">
       <h1 className="tituloPedidos">Tu pedido</h1>
-      { productos && productos.map(e => <ProductoCarrito key={e.id}data={e} borraProducto={borraProducto}/> )}
+      { productos && productos.map(e => <ProductoCarrito key={e.id} data={e} borraProducto={borraProducto}/> )}
       <div className="navTotal">
         <div className="cantProductos">
           <p>Cant P.</p>

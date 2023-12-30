@@ -31,8 +31,8 @@
 }
 .btnCerrar {
     position: absolute;
-    top: 3px;
-    right: 3px;
+    top: 8px;
+    right: 15px;
     border: none;
     background: transparent;
     font-size: 1.5rem;
