@@ -67,3 +67,9 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
 }
+.loading {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    background-color: transparent;    
+}

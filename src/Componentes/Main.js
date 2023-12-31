@@ -7,6 +7,7 @@ import CheckCompra from './CheckCompra';
 import Info from './Info';
 import NoDisponible from './NoDisponible';
 import Loader from '../Componentes/Loader';
+import CheckCarrito from '../Componentes/CheckCarrito'
 import './Main.css';
 import './Loader.css';
 import HomeFalse from "../img/homeFalse.webp";
@@ -32,6 +33,7 @@ const Main = () => {
   const [total, setTotal] = useState(0)
   const [checkproducto, setCheckproducto] = useState(false)
   const [productoVendido, setProductoVendido] = useState(false)
+  const [ repetido, setRepetido] = useState(false)
   const [info, setInfo] = useState(false);
   const [loading, setLoading] = useState(false)
 
@@ -120,6 +122,12 @@ favoritos.forEach(e => {
  const ingresarProductos = (e) => {
   const id = parseFloat(e.target.dataset.id);  
   const productoCarrito = db.filter(e => e.id === id);
+  for ( let i = 0; i < productos.length; i++){
+    if(productos[i].id === id){
+      setRepetido(true)
+      return;
+    }
+  }
     setProductos([...productos,productoCarrito[0]]);
     setCheckproducto(true);  
  }
@@ -134,6 +142,7 @@ favoritos.forEach(e => {
  useEffect(() => { 
   const $total = productos.reduce((e,i) => e + i.precio,0)
   setTotal($total)
+  
  },[productos])
  
  return (
@@ -147,8 +156,9 @@ favoritos.forEach(e => {
         <button style={{color:"red"}} className="btnNav" onClick={() => {setCarrito(true); setHome(false); setFav(false)}}><span title="Tu Pedido">{ carrito ? <img src={CarritoOn} alt="icono del carrito"/> : <img src={CarritoOf} alt="icono del carrito"/>}{productos.length}</span></button>
         <button className="btnNav" onClick={() => {setHome(true); setFav(false); setCarrito(false);setInfo(true)}} ><span title="Informacion">{info ? <img src={InfoOn} alt="Ico Info" />:<img src={InfoOf} alt="Ico Info" />}</span></button>
       </nav>
+      <div className="loading">{ loading && <Loader /> }</div>
       <section id="main">
-        { loading && <Loader /> }
+        
         { carrito && <Carrito productos={productos} setProductos={setProductos} cantPares={productos.length} total={total} borraProducto={borraProducto} setCarrito={setCarrito} setHome={setHome}/>}
         { lupa && <Lupa closeModal={closeModal} imgLupa={imgLupa}/> }
         { home && db.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>)) }
@@ -157,6 +167,7 @@ favoritos.forEach(e => {
         { checkproducto && <CheckCompra setCheckproducto={setCheckproducto}/> }
         { info && <Info setInfo={setInfo}/> }
         { productoVendido && <NoDisponible cerrarVendido={cerrarVendido} />}
+        { repetido && <CheckCarrito setRepetido={setRepetido}/>}
       </section>
       <a href="#cabecera" className="flecha">Flecha</a>
       <a href="https://wa.me/541134025499" target="_blanck" className="whatsAap"><span title="Envianos tu consulta">WhatAaap</span></a>
