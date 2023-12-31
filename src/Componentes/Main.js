@@ -171,6 +171,9 @@ favoritos.forEach(e => {
       </section>
       <a href="#cabecera" className="flecha">Flecha</a>
       <a href="https://wa.me/541134025499" target="_blanck" className="whatsAap"><span title="Envianos tu consulta">WhatAaap</span></a>
+      <footer>
+        <p>OfertApp - Version 1.2 - Hernán Luis Veyret - 2023</p>
+      </footer>
     </>
   )
 } // 🏠 ⭐🗑️
