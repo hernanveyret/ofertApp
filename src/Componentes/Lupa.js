@@ -7,7 +7,7 @@ const Lupa = ({closeModal,imgLupa}) => {
       <div className="contenedor">
        <button className="btnCerrar" onClick={closeModal}>❌</button>
        <div className="contenedorImg">
-            <img src={imgLupa}    alt="Imagen del producto" />
+            <img src={imgLupa} alt="Imagen del producto" />
             </div>
       </div>
    </div>
