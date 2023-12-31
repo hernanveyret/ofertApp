@@ -30,11 +30,9 @@
     border: 10px solid orangered;
     transition: all .5s;
     z-index:30;
-    cursor:url("../img/lupa.webp"),auto;
+    
 }
-.contenedorImg img:hover {
-    transform: scale(1.4);
-}
+
 .btnCerrar {
     position: absolute;
     top: 8px;
