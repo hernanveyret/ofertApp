@@ -120,14 +120,19 @@
     border-radius: 0.25rem;
     width: 80px;
 }
-
-h2 {
+.tituloPedidos, h2 {
+    color: grey;
+    font-family: sans-serif;
+}
+.tituloPedidos {    
+    font-size: 1.90rem;
+}
+.tituloCarrito {
     font-size: .90rem;
-    padding: 10px;
+    padding: 10px 30px;
     border: thin solid grey;
     border-radius: 0.80rem;
     margin-top: 10px;
-    color: grey;
 }
 .carritoVacioImg {
     width: 50%;
@@ -146,10 +151,10 @@ h2 {
     .inputName {
         width: 150px;
     }
-    h2 {
+    .tituloCarrito {
         font-size: 1.5rem;
     }
     .carritoVacioImg {
-        width: 60%;
+        width: 20%;
     }
   }

@@ -148,7 +148,7 @@ favoritos.forEach(e => {
  return (
     <>
       <header>
-        <h1 id="cabecera">OfertApp</h1>
+        <h1 className="tituloApp" id="cabecera">OfertApp</h1>
       </header>
       <nav>
         <button className="btnNav" onClick={() => {setHome(true); setFav(false); setCarrito(false);setInfo(false)}} ><span title="Pagina principal">{home ? <img src={HomeTrue} alt="Ico Home true" />: <img src={HomeFalse} alt="Ico Home False" />}</span></button>
@@ -162,7 +162,7 @@ favoritos.forEach(e => {
         { carrito && <Carrito productos={productos} setProductos={setProductos} cantPares={productos.length} total={total} borraProducto={borraProducto} setCarrito={setCarrito} setHome={setHome}/>}
         { lupa && <Lupa closeModal={closeModal} imgLupa={imgLupa}/> }
         { home && db.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>)) }
-        { Fav && favoritos.length > 0 ? favoritos.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>)) : <h2>No Tienen Productos Favoritos</h2>}
+        { Fav && favoritos.length > 0 ? favoritos.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>)) : <h2 className="tituloCarrito">No Hay Productos Favoritos</h2>}
         { error && <Error msj={error} /> }
         { checkproducto && <CheckCompra setCheckproducto={setCheckproducto}/> }
         { info && <Info setInfo={setInfo}/> }

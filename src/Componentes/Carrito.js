@@ -28,16 +28,16 @@ const Carrito = ({productos,setProductos,cantPares,total,borraProducto, setCarri
 
   const CarritoVacio = () => {
     return (
-      <div>
-        <h2>Tu carrito esta vacio</h2>
+      <>
+        <h2 className="tituloCarrito">Tu Carrito Esta Vacio</h2>
         <img src={ImgCarritoVacio} alt="imagen carrito vacio" className="carritoVacioImg"/>
-      </div>
+      </>
     )
   }
   
   return (
     <div className="contenedorCarrito">
-      <h1 className="tituloPedidos">Tu pedido</h1>
+      { productos.length > 0 ? <h1 className="tituloPedidos">Tu pedido</h1> : ""}
       { productos.length > 0 ? productos.map(e => <ProductoCarrito key={e.id} data={e} borraProducto={borraProducto}/> ) :  <CarritoVacio /> }
       <div className="navTotal">
         <div className="cantProductos">
