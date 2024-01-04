@@ -162,7 +162,7 @@ favoritos.forEach(e => {
         { carrito && <Carrito productos={productos} setProductos={setProductos} cantPares={productos.length} total={total} borraProducto={borraProducto} setCarrito={setCarrito} setHome={setHome}/>}
         { lupa && <Lupa closeModal={closeModal} imgLupa={imgLupa}/> }
         { home && db.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>)) }
-        { Fav && favoritos.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>)) }
+        { Fav && favoritos.length > 0 ? favoritos.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>)) : <h2>No Tienen Productos Favoritos</h2>}
         { error && <Error msj={error} /> }
         { checkproducto && <CheckCompra setCheckproducto={setCheckproducto}/> }
         { info && <Info setInfo={setInfo}/> }
