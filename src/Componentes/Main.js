@@ -154,7 +154,7 @@ favoritos.forEach(e => {
         <button className="btnNav" onClick={() => {setHome(true); setFav(false); setCarrito(false);setInfo(false)}} ><span title="Pagina principal">{home ? <img src={HomeTrue} alt="Ico Home true" />: <img src={HomeFalse} alt="Ico Home False" />}</span></button>
         <button className="btnNav" onClick={() => {setFav(true); setHome(false); setCarrito(false);setInfo(false)}} ><span title="Tus favoritos"><img src={FavOn} alt="Ico Home" />{favoritos.length}</span></button>
         <button style={{color:"red"}} className="btnNav" onClick={() => {setCarrito(true); setHome(false); setFav(false)}}><span title="Tu Pedido">{ carrito ? <img src={CarritoOn} alt="icono del carrito"/> : <img src={CarritoOf} alt="icono del carrito"/>}{productos.length}</span></button>
-        <button className="btnNav" onClick={() => {setHome(true); setFav(false); setCarrito(false);setInfo(true)}} ><span title="Informacion">{info ? <img src={InfoOn} alt="Ico Info" />:<img src={InfoOf} alt="Ico Info" />}</span></button>
+        <button className="btnNav" onClick={() => {setInfo(true)}} ><span title="Informacion">{info ? <img src={InfoOn} alt="Ico Info" />:<img src={InfoOf} alt="Ico Info" />}</span></button>
       </nav>
       <div className="loading">{ loading && <Loader /> }</div>
       <section id="main">

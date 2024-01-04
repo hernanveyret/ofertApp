@@ -16,8 +16,8 @@ const Cards = ({ openModal,data,idFavorito,ingresarProductos,setProductoVendido}
           <p style={{fontSize:"1.5rem"}}>${data.precio}</p>
           <div className="navCard">
             <button className="btnCard" onClick={idFavorito}>{data.favorito ? <span title="Quitar producto de favoritos"><img src={FavOn} data-id={data.id} alt="Ico Home" /></span> : <span title="Ingresar producto a favoritos"><img src={FavOffNav} data-id={data.id} alt="Ico Home" /></span>}</button>
-            <button className="btnCard lupa" onClick={openModal} data-id={data.id}><span title="Agrandar imagen"></span></button>
-            <button className="btnCard carrito" onClick={ data.vendido ? () => {setProductoVendido(true)}: ingresarProductos } data-id={data.id}><span title="Agregar producto al carrito">comprar</span></button>
+            <button className="btnCard lupa" onClick={openModal} data-id={data.id} title="Agrandar imagen" ></button>
+            <button className="btnCard carrito" onClick={ data.vendido ? () => {setProductoVendido(true)}: ingresarProductos } data-id={data.id} title="Agregar producto al carrito" >comprar</button>
           </div>
     </div>
   )

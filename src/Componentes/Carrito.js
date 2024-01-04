@@ -1,6 +1,7 @@
 import React, { useState} from 'react';
 import ProductoCarrito from "./ProductoCarrito";
 import "./carrito.css"
+import ImgCarritoVacio from "../img/carritoVacio.webp";
 
 const Carrito = ({productos,setProductos,cantPares,total,borraProducto, setCarrito,setHome}) => {
   const [nombre, setNombre] = useState("");
@@ -8,7 +9,7 @@ const Carrito = ({productos,setProductos,cantPares,total,borraProducto, setCarri
   const handleNombre = (e) => {
     setNombre(e)
   }
-  
+ 
   const enviarPedido = () => {
     const tel = `541134025499`;
     let msg =`Mi pedido:\n`;
@@ -24,11 +25,20 @@ const Carrito = ({productos,setProductos,cantPares,total,borraProducto, setCarri
     setCarrito(false)
     setHome(true)
   }
+
+  const CarritoVacio = () => {
+    return (
+      <div>
+        <h2>Tu carrito esta vacio</h2>
+        <img src={ImgCarritoVacio} alt="imagen carrito vacio" className="carritoVacioImg"/>
+      </div>
+    )
+  }
   
   return (
     <div className="contenedorCarrito">
       <h1 className="tituloPedidos">Tu pedido</h1>
-      { productos && productos.map(e => <ProductoCarrito key={e.id} data={e} borraProducto={borraProducto}/> )}
+      { productos.length > 0 ? productos.map(e => <ProductoCarrito key={e.id} data={e} borraProducto={borraProducto}/> ) :  <CarritoVacio /> }
       <div className="navTotal">
         <div className="cantProductos">
           <p>Cant P.</p>
