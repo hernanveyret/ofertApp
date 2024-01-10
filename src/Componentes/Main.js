@@ -33,7 +33,7 @@ const Main = () => {
   const [total, setTotal] = useState(0)
   const [checkproducto, setCheckproducto] = useState(false)
   const [productoVendido, setProductoVendido] = useState(false)
-  const [ repetido, setRepetido] = useState(false)
+  const [repetido, setRepetido] = useState(false)
   const [info, setInfo] = useState(false);
   const [loading, setLoading] = useState(false)
 
@@ -162,7 +162,7 @@ favoritos.forEach(e => {
         { carrito && <Carrito productos={productos} setProductos={setProductos} cantPares={productos.length} total={total} borraProducto={borraProducto} setCarrito={setCarrito} setHome={setHome}/>}
         { lupa && <Lupa closeModal={closeModal} imgLupa={imgLupa}/> }
         { home && db.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>)) }
-        { Fav && favoritos.length > 0 ? favoritos.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>)) : <h2 className="tituloCarrito">No Hay Productos Favoritos</h2>}
+        { Fav && favoritos.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>))}
         { error && <Error msj={error} /> }
         { checkproducto && <CheckCompra setCheckproducto={setCheckproducto}/> }
         { info && <Info setInfo={setInfo}/> }
