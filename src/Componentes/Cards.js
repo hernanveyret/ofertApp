@@ -3,7 +3,6 @@ import FavOffNav from "../img/fav.webp";
 import FavOn from "../img/favOn.webp";
 import "./cards.css";
 const Cards = ({ openModal,data,idFavorito,ingresarProductos,setProductoVendido}) => {
-  
   return (
     <div className="tarjeta" key={data.id}>
       <h4 className="titulo">{data.titulo}</h4>

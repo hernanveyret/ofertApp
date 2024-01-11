@@ -7,7 +7,8 @@ import CheckCompra from './CheckCompra';
 import Info from './Info';
 import NoDisponible from './NoDisponible';
 import Loader from '../Componentes/Loader';
-import CheckCarrito from '../Componentes/CheckCarrito'
+import CheckCarrito from '../Componentes/CheckCarrito';
+import Favoritos from "./Favoritos";
 import './Main.css';
 import './Loader.css';
 import HomeFalse from "../img/homeFalse.webp";
@@ -162,7 +163,7 @@ favoritos.forEach(e => {
         { carrito && <Carrito productos={productos} setProductos={setProductos} cantPares={productos.length} total={total} borraProducto={borraProducto} setCarrito={setCarrito} setHome={setHome}/>}
         { lupa && <Lupa closeModal={closeModal} imgLupa={imgLupa}/> }
         { home && db.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>)) }
-        { Fav && favoritos.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>))}
+        { Fav &&  favoritos.map(e => (<Cards data={e} key={e.id} idFavorito={idFavorito} openModal={openModal} ingresarProductos={ingresarProductos} setProductoVendido={setProductoVendido}/>)) } 
         { error && <Error msj={error} /> }
         { checkproducto && <CheckCompra setCheckproducto={setCheckproducto}/> }
         { info && <Info setInfo={setInfo}/> }
