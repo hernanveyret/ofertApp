@@ -93,7 +93,7 @@
     "color":"Beige",
     "precio":1500,
     "favorito":false,
-    "vendido":false
+    "vendido":true
   },
   {
     "id":9,
@@ -117,7 +117,7 @@
     "color":"Rosa",
     "precio":1500,
     "favorito":false,
-    "vendido":false
+    "vendido":true
   },
   {
     "id":11,
@@ -297,7 +297,7 @@
     "color":"Rosa/Blanca",
     "precio":2500,
     "favorito":false,
-    "vendido":false
+    "vendido":true
   },
   {
     "id":26,
