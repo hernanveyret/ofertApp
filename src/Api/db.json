@@ -129,7 +129,7 @@
     "color":"Negro",
     "precio":1500,
     "favorito":false,
-    "vendido":false
+    "vendido":true
   },
   {
     "id":12,
@@ -153,7 +153,7 @@
     "color":"Verde",
     "precio":1500,
     "favorito":false,
-    "vendido":false
+    "vendido":true
   },
   {
     "id":14,
@@ -309,7 +309,7 @@
     "color":"Violeta",
     "precio":2000,
     "favorito":false,
-    "vendido":false
+    "vendido":true
   }, 
   {
     "id":27,
