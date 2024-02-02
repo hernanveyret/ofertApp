@@ -273,7 +273,7 @@
     "color":"Rallas / Azul",
     "precio":1500,
     "favorito":false,
-    "vendido":false
+    "vendido":true
   },
   {
     "id":24,
